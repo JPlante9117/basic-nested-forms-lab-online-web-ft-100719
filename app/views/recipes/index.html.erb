@@ -1,5 +1,11 @@
+<h1>All Recipes</h1>
+<% if Recipe.all.empty? %>
+  There are currently no Recipes!
+<% end %>
 <ul>
 <% @recipes.each do |recipe| %>
   <li><%= link_to recipe.title, recipe %></li>
 <% end %>
 </ul>
+<hr>
+<%= link_to "New Recipe", new_recipe_path %>
